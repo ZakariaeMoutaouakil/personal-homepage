@@ -5,17 +5,17 @@ import {ProjectsComponent} from "./projects/projects.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 
 const routes = [
-  // {
-  //   path:"",
-  //   redirectTo: "/home",
-  //   pathMatch: "full"
-  // },
   {
     path:"",
+    redirectTo: "/home",
+    pathMatch:  'full' as "full" | "prefix"
+  },
+  {
+    path:"home",
     component: HomeComponent
   },
   {
-    path:"/projects",
+    path:"projects",
     component: ProjectsComponent
   },
   {

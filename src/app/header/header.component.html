@@ -1,13 +1,9 @@
 <mat-toolbar color="primary" class="toolbar">
-  <a mat-button routerLink="">Zakariae Moutaouakil</a>
+  <a mat-button routerLink="/home">Zakariae Moutaouakil</a>
   <span></span>
   <a mat-raised-button href="https://github.com/ZakariaeMoutaouakil/ZakariaeMoutaouakil.github.io" target="_blank"
      color="primary">GitHub</a>
-  <a mat-raised-button [matMenuTriggerFor]="menu" routerLink="/projects" color="primary">Projects</a>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Project 1</button>
-    <button mat-menu-item>Project 2</button>
-  </mat-menu>
+  <a mat-raised-button color="primary" routerLink="/projects">Projects</a>
   <a mat-raised-button href="mailto:zakariaemoutaouakil@proton.me" color="primary">Contact</a>
 </mat-toolbar>
 

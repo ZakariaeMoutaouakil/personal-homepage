@@ -1,1 +1,2 @@
-<mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+<mat-progress-bar mode="determinate" [value]="counter()"></mat-progress-bar>
+<button (click)="start()">Start loading</button>
