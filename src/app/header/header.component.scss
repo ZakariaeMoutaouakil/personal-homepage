@@ -1,0 +1,9 @@
+$spacing : 1em;
+mat-toolbar{
+  display: grid;
+  grid-template-columns: auto 3fr auto auto auto;
+}
+a{
+  margin-right: $spacing;
+  margin-left: $spacing;
+}
