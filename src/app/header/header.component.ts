@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {ProgressBarService} from "../progress-bar/progress-bar.service";
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(private progressBarService : ProgressBarService) {
+  }
+  startProgressBar($event: MouseEvent) {
+    console.log($event)
+    this.progressBarService.clickEvent.next($event);
+  }
 }

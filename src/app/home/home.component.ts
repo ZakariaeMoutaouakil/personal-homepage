@@ -1,4 +1,8 @@
-import {Component, OnInit, signal} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  signal
+} from '@angular/core';
 import {concatMap, delay, from, mergeMap, of} from "rxjs";
 
 @Component({
@@ -7,12 +11,16 @@ import {concatMap, delay, from, mergeMap, of} from "rxjs";
   styleUrl: './home.component.scss'
 })
 
-export class HomeComponent implements OnInit {
-  typingSpeed = 100;
-  welcomeMessage = "Welcome to my homepage. It is still under construction. ☺️";
+export class HomeComponent implements OnInit{
+  private typingSpeed = 100;
+  private welcomeMessage = "Welcome to my homepage. It is still under construction. ☺️";
   message = signal<string>("");
 
   ngOnInit(): void {
+    this.welcome();
+  }
+
+  welcome(){
     from(this.welcomeMessage.split(""))
       .pipe(
         mergeMap((alphabet) => from(alphabet)),

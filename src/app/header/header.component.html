@@ -1,9 +1,18 @@
 <mat-toolbar color="primary" class="toolbar">
-  <a mat-button routerLink="/home">Zakariae Moutaouakil</a>
+  <a (click)="startProgressBar($event)"
+     mat-button
+     routerLink="/home">Zakariae Moutaouakil</a>
   <span></span>
-  <a mat-raised-button href="https://github.com/ZakariaeMoutaouakil/ZakariaeMoutaouakil.github.io" target="_blank"
+  <a mat-raised-button
+     href="https://github.com/ZakariaeMoutaouakil/ZakariaeMoutaouakil.github.io"
+     target="_blank"
      color="primary">GitHub</a>
-  <a mat-raised-button color="primary" routerLink="/projects">Projects</a>
-  <a mat-raised-button href="mailto:zakariaemoutaouakil@proton.me" color="primary">Contact</a>
+  <a (click)="startProgressBar($event)"
+     color="primary"
+     mat-raised-button
+     routerLink="/projects">Projects</a>
+  <a mat-raised-button
+     href="mailto:zakariaemoutaouakil@proton.me"
+     color="primary">Contact</a>
 </mat-toolbar>
 

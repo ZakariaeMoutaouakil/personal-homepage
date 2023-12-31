@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -17,6 +17,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {AppRoutingModule} from "./app-routing.module";
     HomeComponent,
     ProjectsComponent,
     ProgressBarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,
@@ -41,6 +43,9 @@ import {AppRoutingModule} from "./app-routing.module";
     RouterLink
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }
