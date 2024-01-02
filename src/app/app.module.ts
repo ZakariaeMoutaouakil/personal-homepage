@@ -18,6 +18,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { FooterComponent } from './footer/footer.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -40,12 +42,11 @@ import { FooterComponent } from './footer/footer.component';
     MatMenuModule,
     MatProgressBarModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
