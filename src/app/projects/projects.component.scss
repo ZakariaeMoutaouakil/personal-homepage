@@ -1,15 +1,35 @@
 .all_projects{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
+@media only screen and (max-width: 768px){
+  .all_projects{
+    display: grid;
+    grid-template-columns: 100%;
+    align-self: center;
+  }
+}
+
 .card{
-  max-width: 70%;
+  //max-width: 70%;
+  max-width: 25%;
   border: solid;
   border-color: transparent;
   border-radius: 2rem;
-  margin-top: 5em;
+  //margin-top: 5em;
+  margin: 5em 5em;
   background-color: rgb(230, 230, 230);
   border-width: 0;
+}
+@media only screen and (max-width: 768px){
+  .card{
+    max-width: 100%;
+    margin: 5em 1em;
+  }
 }
 .card-info{
   padding: 0 10%;
@@ -41,10 +61,4 @@ img{
   height: auto;
   border-radius: 2rem;
   //max-height: 200px;
-}
-.left, .right{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
 }

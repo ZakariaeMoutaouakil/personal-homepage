@@ -7,3 +7,19 @@ a{
   margin-right: $spacing;
   margin-left: $spacing;
 }
+button{
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  mat-toolbar{
+    display: grid;
+    grid-template-columns: auto 3fr auto;
+  }
+  a.custom{
+    display: none;
+  }
+  button{
+    display: inline;
+  }
+}
+
