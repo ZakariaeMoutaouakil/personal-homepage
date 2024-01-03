@@ -1,7 +1,30 @@
-//:host {
-//  display: block;
-//}
-//mat-card .custom{
-//  margin-right: 64px;
-//  margin-left: 64px;
-//}
+.all_projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.card{
+  max-width: 70%;
+  border: solid;
+  border-color: transparent;
+  border-radius: 2rem;
+  margin-top: 5em;
+  background-color: rgb(230, 230, 230);
+  border-width: 0;
+}
+.card-info{
+  padding: 0 10%;
+}
+img{
+  //object-fit: cover;
+  object-fit: scale-down;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  //max-height: 200px;
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
