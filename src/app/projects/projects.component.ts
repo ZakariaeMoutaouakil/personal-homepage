@@ -3,8 +3,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss',
-  // encapsulation : ViewEncapsulation.None
+  styleUrl: './projects.component.scss'
 })
 
 export class ProjectsComponent {
