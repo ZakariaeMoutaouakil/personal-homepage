@@ -1,119 +1,32 @@
 <div class="all_projects">
-    <div class="card">
-          <img mat-card-image
-               src="https://img.freepik.com/premium-vector/cute-cat-dog-flat-design-illustration_723554-122.jpg"
-               alt="Photo of a Shiba Inu">
-      <div class="card-info">
-        <div class="card-header">
-          <div class="icon">
-            <mat-icon>compare</mat-icon>
-          </div>
-          <div class="title">
-            <h1>Animals Classification</h1>
-            <h2>Keras, Computer Vision</h2>
-          </div>
-        </div>
-        <p>Fine-tuning the XCeption Model using Keras and Data augmentation to classify animals.</p>
-        <button mat-button>See Demo</button>
-        <button mat-button>GitHub</button>
-      </div>
-    </div>
-    <div class="card">
-      <img mat-card-image
-           src="https://img.freepik.com/premium-vector/cute-cat-dog-flat-design-illustration_723554-122.jpg"
-           alt="Photo of a Shiba Inu">
-      <div class="card-info">
-        <div class="card-header">
-          <div class="icon">
-            <mat-icon>compare</mat-icon>
-          </div>
-          <div class="title">
-            <h1>Animals Classification</h1>
-            <h2>Keras, Computer Vision</h2>
-          </div>
-        </div>
-        <p>Fine-tuning the XCeption Model using Keras and Data augmentation to classify animals.</p>
-        <button mat-button>See Demo</button>
-        <button mat-button>GitHub</button>
-      </div>
-    </div>
-  <div class="card">
+  <div
+    class="card"
+    *ngFor="let project of projects"
+  >
     <img mat-card-image
-         src="https://img.freepik.com/premium-vector/cute-cat-dog-flat-design-illustration_723554-122.jpg"
-         alt="Photo of a Shiba Inu">
+         class="big-image"
+         src="{{project.image}}"
+         alt="{{project.titre}}">
     <div class="card-info">
       <div class="card-header">
         <div class="icon">
-          <mat-icon>compare</mat-icon>
+          <mat-icon>{{project.icon}}</mat-icon>
         </div>
         <div class="title">
-          <h1>Animals Classification</h1>
-          <h2>Keras, Computer Vision</h2>
+          <h1>{{project.titre}}</h1>
+          <h2>{{project.tags.join(", ")}}</h2>
         </div>
       </div>
-      <p>Fine-tuning the XCeption Model using Keras and Data augmentation to classify animals.</p>
-      <button mat-button>See Demo</button>
-      <button mat-button>GitHub</button>
-    </div>
-  </div>
-  <div class="card">
-    <img mat-card-image
-         src="https://img.freepik.com/premium-vector/cute-cat-dog-flat-design-illustration_723554-122.jpg"
-         alt="Photo of a Shiba Inu">
-    <div class="card-info">
-      <div class="card-header">
-        <div class="icon">
-          <mat-icon>compare</mat-icon>
-        </div>
-        <div class="title">
-          <h1>Animals Classification</h1>
-          <h2>Keras, Computer Vision</h2>
-        </div>
-      </div>
-      <p>Fine-tuning the XCeption Model using Keras and Data augmentation to classify animals.</p>
-      <button mat-button>See Demo</button>
-      <button mat-button>GitHub</button>
-    </div>
-  </div>
-  <div class="card">
-    <img mat-card-image
-         src="https://img.freepik.com/premium-vector/cute-cat-dog-flat-design-illustration_723554-122.jpg"
-         alt="Photo of a Shiba Inu">
-    <div class="card-info">
-      <div class="card-header">
-        <div class="icon">
-          <mat-icon>compare</mat-icon>
-        </div>
-        <div class="title">
-          <h1>Animals Classification</h1>
-          <h2>Keras, Computer Vision</h2>
-        </div>
-      </div>
-      <p>Fine-tuning the XCeption Model using Keras and Data augmentation to classify animals.</p>
-      <button mat-button>See Demo</button>
-      <button mat-button>GitHub</button>
-    </div>
-  </div>
-  <div class="card">
-    <img mat-card-image
-         src="https://img.freepik.com/premium-vector/cute-cat-dog-flat-design-illustration_723554-122.jpg"
-         alt="Photo of a Shiba Inu">
-    <div class="card-info">
-      <div class="card-header">
-        <div class="icon">
-          <mat-icon>compare</mat-icon>
-        </div>
-        <div class="title">
-          <h1>Animals Classification</h1>
-          <h2>Keras, Computer Vision</h2>
-        </div>
-      </div>
-      <p>Fine-tuning the XCeption Model using Keras and Data augmentation to classify animals.</p>
-      <button mat-button>See Demo</button>
-      <button mat-button>GitHub</button>
+      <p>{{project.description}}</p>
+      <button
+        mat-button
+        [routerLink]="[project.id]"
+      (click)="startProgressBar($event)">See Demo</button>
+      <a mat-button
+         [href]="project.code"
+         target="_blank">See Colab</a>
     </div>
   </div>
 </div>
-
 
 

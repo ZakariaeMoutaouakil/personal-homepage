@@ -4,4 +4,7 @@ export interface Project {
   titre: string;
   tags: string[];
   description: string;
+  icon: string
+  code: string;
+  gradio: string;
 }

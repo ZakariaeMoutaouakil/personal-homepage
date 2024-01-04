@@ -20,6 +20,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import { FooterComponent } from './footer/footer.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
+import { ProjectComponent } from './projects/project/project.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     ProjectsComponent,
     ProgressBarComponent,
     PageNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,3 +1,4 @@
+$background-color:rgb(230, 230, 230);
 .all_projects{
   display: flex;
   flex-direction: row;
@@ -21,25 +22,34 @@
   border-color: transparent;
   border-radius: 2rem;
   //margin-top: 5em;
-  margin: 5em 5em;
-  background-color: rgb(230, 230, 230);
+  margin: 2em 2em;
+  background-color: $background-color;
   border-width: 0;
+  &:hover{
+    background-color: darken($background-color,5%);
+  }
 }
 @media only screen and (max-width: 768px){
   .card{
     max-width: 100%;
-    margin: 5em 1em;
+    margin: 5em 2em;
   }
 }
 .card-info{
-  padding: 0 10%;
+  padding: 0 5%;
   margin-bottom: 5%;
 
 }
 .card-header{
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 20% 80%;
   margin-bottom: 5%;
+}
+h1{
+  font-size: large;
+}
+h2{
+  font-size: medium;
 }
 h1, h2, p, mat-icon{
   margin: 0;
@@ -54,7 +64,23 @@ p{
   align-content: center;
   align-items: center;
 }
-img{
+.image{
+  width: 48px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  //border: solid;
+  //border-color: red;
+  border-radius: 50%;
+  overflow: hidden;
+  //margin: 1em 1em;
+}
+//.image{
+//  border-radius: 50px;
+//}
+.big-image{
   //object-fit: cover;
   object-fit: scale-down;
   max-width: 100%;
