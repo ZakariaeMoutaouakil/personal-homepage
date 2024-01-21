@@ -1,30 +1,37 @@
 <div class="all_projects">
   <div
-    class="card"
     *ngFor="let project of projects"
+    class="card"
   >
-    <img mat-card-image
+    <img alt="{{project.titre}}"
          class="big-image"
-         src="{{project.image}}"
-         alt="{{project.titre}}">
+         mat-card-image
+         src="{{project.image}}">
     <div class="card-info">
       <div class="card-header">
         <div class="icon">
-          <mat-icon>{{project.icon}}</mat-icon>
+          <mat-icon>{{ project.icon }}</mat-icon>
         </div>
         <div class="title">
-          <h1>{{project.titre}}</h1>
-          <h2>{{project.tags.join(", ")}}</h2>
+          <h1>{{ project.titre }}</h1>
+          <h2>{{ project.tags.join(", ") }}</h2>
         </div>
       </div>
-      <p>{{project.description}}</p>
-      <button
-        mat-button
-        [routerLink]="[project.id]"
-      (click)="startProgressBar($event)">See Demo</button>
-      <a mat-button
-         [href]="project.code"
-         target="_blank">See Colab</a>
+      <p>{{ project.description }}</p>
+      <!--      <button-->
+      <!--        mat-button-->
+      <!--        [routerLink]="[project.id]"-->
+      <!--      (click)="startProgressBar($event)">See Demo</button>-->
+      @if (project.gradio !== "") {
+        <a mat-button
+           [href]="project.gradio"
+           color="primary"
+           target="_blank">See Demo</a>
+      }
+      <a [href]="project.code"
+         mat-button
+         color="primary"
+         target="_blank">See Code</a>
     </div>
   </div>
 </div>

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+footer {
+  position: fixed;
+  display: grid;
+  align-content: center;
+  background-color: lighten(rgb(194, 24, 91),50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer h2 {
+  font-size: 1em;
+  padding: 0 3em;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 0;
+}

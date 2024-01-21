@@ -9,24 +9,24 @@ export class ProjectsService {
   projects : Project[] = [
     {
       id:0,
-      image:"https://img.freepik.com/premium-vector/cute-cat-dog-flat-design-illustration_723554-122.jpg",
-      titre:"Animals Classification",
-      tags:["Keras","Computer Vision"],
-      description:"Fine-tuning the XCeption Model using Keras and Data augmentation to classify animals.",
-      icon: "compare",
-      code:"",
-      gradio:"https://demomodels-demomodels-bert-finetuned-squad.hf.space"
+      image:"https://static.vecteezy.com/system/resources/previews/003/731/316/non_2x/web-icon-line-on-white-background-image-for-web-presentation-logo-icon-symbol-free-vector.jpg",
+      titre:"Full Stack Web Application (Part 1/2)",
+      tags:["Angular","Django","Typescript","Firebase","Neo4j"],
+      description:"An angular web application with a django rest api backend and a graph database (Neo4j).",
+      icon: "school",
+      code:"https://github.com/ZakariaeMoutaouakil/moodle",
+      gradio:"https://moodle32515.web.app/"
     },
     {
       id:1,
-      image:"https://static.vecteezy.com/ti/vecteur-libre/p1/7225199-robot-vecteur-chat-bot-concept-illustration-vectoriel.jpg",
-      titre:"Question Answering",
-      tags:["PyTorch","NLP"],
-      description:"Question Answering Model based on BERT.",
-      icon: "compare",
-      code:"https://github.com/ZakariaeMoutaouakil/ZakariaeMoutaouakil.github.io",
-      gradio:"https://demomodels-demomodels-bert-finetuned-squad.hf.space"
-    }
+      image:"https://static.vecteezy.com/system/resources/previews/022/217/833/non_2x/editable-icon-of-database-illustration-isolated-on-white-background-using-for-presentation-website-or-mobile-app-free-vector.jpg",
+      titre:"Full Stack Web Application (Part 2/2)",
+      tags:["Angular","Django","Typescript","Firebase","Neo4j"],
+      description:"An angular web application with a django rest api backend and a graph database (Neo4j).",
+      icon: "storage",
+      code:"https://github.com/ZakariaeMoutaouakil/backend",
+      gradio:""
+    },
   ];
 
   constructor() { }

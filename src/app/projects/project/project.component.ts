@@ -9,15 +9,14 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent implements OnInit{
-  url : string;
   trustedUrl : SafeResourceUrl;
   constructor(private projectsService:ProjectsService,
               private activatedRoute:ActivatedRoute,
               private domSanitizer:DomSanitizer) {
   }
-    ngOnInit(): void {
-    this.url=this.projectsService.projects[+this.activatedRoute.snapshot.params['id']].gradio;
-    this.trustedUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.url);
+  ngOnInit(): void {
+    const url: string =this.projectsService.projects[+this.activatedRoute.snapshot.params['id']].gradio;
+    this.trustedUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
 }
