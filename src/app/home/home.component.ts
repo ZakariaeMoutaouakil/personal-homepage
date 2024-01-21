@@ -1,37 +1,5 @@
-import {Component, OnInit, signal, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, signal} from '@angular/core';
 import {concatMap, delay, from, mergeMap, of} from "rxjs";
-import {Bodies} from '../../assets/matter.js';
-
-const width = window.innerWidth;
-const height = window.innerHeight;
-
-// const engine = Engine.create();
-// const {world} = engine;
-// const render = Render.create({
-//   element: document.body,
-//   engine: engine,
-//   options: {
-//     wireframes: false,
-//     width,
-//     height,
-//     background: 'rgb(0,0,0)'
-//   }
-// });
-
-
-function createRandomObject(x, y, size) {
-  switch (Math.floor(Math.random() * 4)) {
-    case 0:
-      return Bodies.trapezoid(x, y, size, size, 1, {label: 'ball'});
-    case 1:
-      return Bodies.rectangle(x, y, size, size, {label: 'ball'});
-    case 2:
-      return Bodies.circle(x, y, size, {label: 'ball'});
-    default:
-      const numberOfEdges = Math.floor(Math.random() * 6) + 4;
-      return Bodies.polygon(x, y, numberOfEdges, size, {label: 'ball'});
-  }
-}
 
 
 @Component({
